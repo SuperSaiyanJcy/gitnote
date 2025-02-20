@@ -1,0 +1,218 @@
+
+% 宏包 中文支持
+% \usepackage{宏包1, 宏包2}
+% ctex：中文支持
+% amsmath：latex数学公式支持
+% graphicx：插入图片
+% algorithm和algorithmic：算法排版
+% listings：插入代码块
+
+% 首行缩进
+% 若LaTeX默认没有段首缩进，因此要首行缩进需要进行修改。在导言区加入如下代码（距离单位一般为pt或em，pt是绝对单位；em是相对单位，表示1个中文字符宽度；本人比较喜欢em）
+% 使用indentfirst宏包
+% \usepackage{indentfirst}
+% 设置首行缩进距离
+% \setlength{\parindent}{2em}
+% 单段取消缩进，放在段首即可
+% \noindent
+% 全局取消缩进，在想缩进的段落再进行缩进，放在导言区
+% \setlength{\parindent}{0pt}
+% 放在想要缩进的段落
+% \hspace*{2em}段落\\
+
+% 导言区与正文区
+% 在begin{document}和end{document}之间的就是正文区，这之前的就是导言区。
+
+% 文档类型
+% \documentclass{article}article、report、book
+
+% 英文引号
+% 在LaTeX中输入英文引号时，把左侧的引号用 ` 代替
+
+% 空格
+% \quad 	1个中文字符的宽度
+% \qquad	2个中文字符的宽度
+% a\ b	1/3字符宽度
+
+% 换行
+% \\
+% 换段
+% \par
+% 新页
+% \newpage
+% 转义字符
+% \+字符
+
+% 可选参数[htbp]
+% LaTeX插入图片、表格等元素时，第一行后面有一个可选参数[htbp]，例如，\begin{figure}[htbp]。
+% h(here): 当前位置；将图形放置在 正文文本中给出该图形环境的地方。如果本页所剩的页面不够， 这一参数将不起作用。
+% t(top): 顶部；将图形放置在页面的顶部。
+% b(bottom): 底部；将图形放置在页面的底部。
+% p(page): 浮动页；将图形放置在一只允许有浮动对象的页面上
+% 缺省为 [tbp]
+
+% 标题、作者、时间
+% 注意：\maketitle这一行一定要在\begin{document}的后面，否则LaTeX会判定为语法错误
+
+% 引用、脚注
+% 引用：写在\begin{quote}和\end{quote}之间。
+% 脚注：在需要添加脚注的文字后添加\footnote{脚注内容}即可
+% 西游记\footnote{中国古典四大名著之一}小说开头写道：
+% \begin{quote}引用的内容
+% {\kaishu 东胜神洲有一花果山，山顶一石，受日月精华，生出一石猴。之后因为成功闯入水帘洞，被花果山诸猴拜为“美猴王”。}
+% \end{quote}
+
+% 架构
+% 标题设置：一级标题\section{}，耳机标题\subsection{}，三级标题\subsubsection{}；
+% 段落设置：在一段的最后添加\par代表一段的结束；
+% 目录设置：在\begin{document}内容中添加：\tableofcontents
+
+% 链接
+% 导入宏包：\usepackage{url}
+% 插入超链接：\url{www.baidu.com}
+
+% 字体，大小，颜色
+% {\字体 内容}	{\songti SuperSaiyanJcy}
+% {\bf 粗体}\textbf{粗体}
+% {\it 斜体}\textit{斜体}
+% {\sl 斜体}\textsl{斜体}
+% 大小
+% {\tiny Hello}{\scriptsize Hello}{\footnotesize Hello}{\small Hello}{\normalsize Hello}{\large Hello}
+% 颜色
+% 需要导入宏包\usepackage{color,xcolor}
+% 预先定义好的颜色： red, green, blue, white, black, yellow, gray, darkgray, lightgray, brown, cyan, lime, magenta, olive, orange, pink, purple, teal, violet.
+
+% 定义颜色的5种方式
+% \definecolor{light-gray}{gray}{0.95}    % 1.灰度
+% \definecolor{orange}{rgb}{1,0.5,0}      % 2.rgb
+% \definecolor{orange}{RGB}{255,127,0}    % 3.RGB
+% \definecolor{orange}{HTML}{FF7F00}      % 4.HTML
+% \definecolor{orange}{cmyk}{0,0.5,1,0}   % 5.cmyk
+% \begin{document}
+% % \pagecolor{yellow}          %设置背景色为黄色
+% % 使用颜色的常用方式
+% \textcolor{green}{文字内容}
+% \color{orange}{文字内容}
+% \textcolor[rgb]{0,1,0}{文字内容}
+% \color[rgb]{1,0,0}{文字内容}
+% % 使用底色
+% \colorbox{red}{\color{black}文字内容}红底黑字
+% \fcolorbox{red}{green}{文字内容} % 框色+背景色
+% \end{document}
+
+% 单张图片
+% 需要导入宏包：\usepackage{graphicx}
+% %开始插入图片
+% \begin{figure}[htbp] % htbp代表图片插入位置的设置
+% 	\centering %图片居中
+% 	%添加图片；[]中为可选参数，可以设置图片的宽高；{}中为图片的相对位置
+% 	\includegraphics[width=6cm]{image.jpg}
+% 	\caption{达尔文游戏} % 图片标题
+% 	\label{pic1} % 图片标签
+% 	\end{figure}
+	
+% 数学公式
+% 公式支持
+% 左对齐公式（行中公式）：$数学公式$
+% 居中公式（独立公式）：$$数学公式$$
+% LaTeX要输入数学公式需要导入宏包\usepackage{amsmath}；若要对公式的字体进行修改，还需要引入宏包\usepackage{amsfonts}
+% 使用$，即行中公式时（左对齐），数学公式与$连接处不要有空格，否则公式不会显示。
+% 使用$$，即居中公式时，数学公式与$$连接处可以有空格。即$ 数学公式 $ 不显示公式。
+% 使用$$时，上方要空一行。
+% =不要单独打一行，否则可能会出错。
+% + - * / = ( ) | , . '等符号直接在$或$$之间输入即可识别
+
+% 在公式末尾使用\tag{编号}来实现公式手动编号，大括号内的内容可以自定义。需要使用\usepackage{amsmath}宏包，不能写在$或$$中，会报错
+% \begin{equation}
+% 	a^2+b^2=c^2
+% 	\tag{2}
+% \end{equation}
+
+% 在导言区使用\newtheorem{example}{Example}[section]可以自定义标题样式
+% \newtheorem{example}{Example}[section] % 自定义example样式
+% \begin{document}
+% \maketitle
+% \section{Introduction}
+% \begin{example}{Test1}
+% Hello world!
+% \end{example}
+% \begin{example}{Test2}
+% Hello world!
+% \end{example}
+% \end{document}
+
+% 代码块
+% 使用\usepackage{listings}和\usepackage{xcolor}宏包，并使用\lstset{}进行高级设置，然后使用\begin{lstlisting}[language=xxx]和\end{lstlisting}插入代码块
+
+% 代码块基础设置
+% \lstset{
+% numbers=left,                          	% 在左侧显示行号
+% showstringspaces=false,        			% 不显示字符串中的空格
+% frame=single,                         	% 设置代码块边框
+% numberstyle=\color{darkgray},               % 设置行号格式
+% backgroundcolor=\color{white},              % 设置背景颜色
+% keywordstyle=\color{blue},                  % 设置关键字颜色
+% commentstyle=\it\color[RGB]{0,100,0},       % 设置代码注释的格式
+% stringstyle=\sl\color{red},                 % 设置字符串格式
+% }
+
+% \begin{lstlisting}[language=c]
+% #include <stdio.h>
+% // main function
+% int main() {
+%     printf("Hello World!");
+%     return 0;
+% }
+% \end{lstlisting}
+
+
+% 无自动编号的标题
+% LaTeX中的标题都是自动编号的，若想使用无编号的标题，可使用带*的section代码
+% \section*{References}
+
+
+% 参考地址https://blog.csdn.net/NSJim/article/details/109066847
+
+\documentclass[a4paper]{article}
+\usepackage[margin=1in]{geometry}
+
+\usepackage{amsmath}
+\usepackage{color,xcolor}
+
+% \usepackage[UTF8]{ctex}
+\usepackage{xeCJK}
+\usepackage{fontspec}
+% \setCJKmainfont[BoldFont={SimSun}]{SimSun}  % 设置 SimSun 字体，但禁用粗体
+% 设置中文字体
+\setCJKmainfont{Microsoft YaHei}   % 设置中文正文字体为微软雅黑
+\setCJKsansfont{Microsoft YaHei}   % 设置无衬线字体为微软雅黑
+\setCJKmonofont{FangSong}   % 设置等宽字体为仿宋体
+% 设置英文字体
+\setmainfont{Times New Roman}  % 设置英文主字体为 Times New Roman
+\usepackage{setspace}
+% \onehalfspacing
+\doublespacing
+
+\usepackage{indentfirst}
+\setlength{\parindent}{2em}
+
+\title{latex测试}
+\author{SuperSaiyanJcy}
+% \date{2024.12.11}
+\date{\today}
+\begin{document}
+\maketitle 	% 添加这一句才能够显示标题等信息
+% \tableofcontents
+\newpage
+\setcounter{section}{4}
+\section{测试标题}
+\subsection{你好\ hello}
+\sloppy
+\noindent
+公式测试：$q=\pm ne,\ e = 1.602*10^{-19}C$\\
+vabubv
+
+\end{document}
+
+
+
