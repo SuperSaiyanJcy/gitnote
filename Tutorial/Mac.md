@@ -31,6 +31,8 @@ alias gcc="gcc-14"
 ## homebrew
 
 ```shell
+# 软链接 类似创建快捷方式 硬链接 复制一份
+ln -s /opt/homebrew/bin/7zz /opt/homebrew/bin/7z
 # install
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
