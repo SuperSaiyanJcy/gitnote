@@ -1,0 +1,5 @@
+Tutorial/LateX/*.aux
+Tutorial/LateX/*.log
+Tutorial/LateX/*.bbl
+Tutorial/LateX/*.gz
+*.DS_Store
